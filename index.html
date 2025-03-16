@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andre's Study Timetable</title>
+  <style>
+    body {
+      background-color: #1a1a1a;
+      font-family: Arial, sans-serif;
+      color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      height: 100vh;
+      overflow-x: hidden;
+      text-align: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      padding: 20px;
+      overflow-y: auto;
+      height: 90vh;
+    }
+
+    .motivational-message {
+      font-size: 1.3em;
+      color: #ff9e2a;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .timetable {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    .day {
+      flex: 1 1 calc(33% - 20px);
+      background-color: #333;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .day-header {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #ff4c4c;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .time-slot {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px;
+      border-radius: 8px;
+      background-color: #444;
+      margin-bottom: 8px;
+    }
+
+    .time-slot:hover {
+      background-color: #555;
+    }
+
+    .subject {
+      color: #f4f4f4;
+      font-weight: bold;
+    }
+
+    .activity {
+      color: #ff9e2a;
+      font-weight: normal;
+    }
+
+    .break {
+      color: #ff9e2a;
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    .free-time {
+      color: #ff9e2a;
+    }
+
+    .long-break {
+      color: #ff9e2a;
+      font-style: italic;
+    }
+
+    .time-slot.break {
+      color: #ff9e2a;
+      font-style: italic;
+    }
+
+    /* Styling for smaller devices */
+    @media (max-width: 768px) {
+      .day {
+        flex: 1 1 calc(50% - 20px);
+      }
+    }
+
+    /* Styling for very small devices */
+    @media (max-width: 480px) {
+      .day {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="motivational-message">
+      Stay focused, Andre! Every effort counts, and you're getting closer to your goals! 🔥
+    </div>
+
+    <div class="motivational-message">
+      Keep up the hard work! Success is the sum of small efforts repeated daily! 💪
+    </div>
+
+    <div class="timetable">
+      <!-- Monday -->
+      <div class="day">
+        <div class="day-header">Monday</div>
+        <div class="time-slot"><span class="subject">5:00am - 6:00am</span><span class="activity">Geography (Strong Subject)</span></div>
+        <div class="time-slot"><span class="subject">6:00am - 7:00am</span><span class="activity">Religious Studies (Strong Subject)</span></div>
+        <div class="time-slot"><span class="subject">8:00am - 4:00pm</span><span class="activity">School</span></div>
+        <div class="time-slot"><span class="subject">4:00pm - 7:00pm</span><span class="activity free-time">Free Time</span></div>
+        <div class="time-slot"><span class="subject">7:00pm - 8:00pm</span><span class="activity">Physics (Weak Subject)</span></div>
+      </div>
+
+      <!-- Tuesday -->
+      <div class="day">
+        <div class="day-header">Tuesday</div>
+        <div class="time-slot"><span class="subject">5:00am - 6:00am</span><span class="activity">Biology (Weak Subject)</span></div>
+        <div class="time-slot"><span class="subject">6:00am - 7:00am</span><span class="activity">Literature (Strong Subject)</span></div>
+        <div class="time-slot"><span class="subject">7:40am - 4:00pm</span><span class="activity">School and Random Revision</span></div>
+        <div class="time-slot"><span class="subject">4:00pm - 7:00pm</span><span class="activity free-time">Free Time</span></div>
+        <div class="time-slot"><span class="subject">7:00pm - 8:00pm</span><span class="activity">Geography (Strong Subject)</span></div>
+      </div>
+
+      <!-- Wednesday -->
+      <div class="day">
+        <div class="day-header">Wednesday</div>
+        <div class="time-slot"><span class="subject">5:00am - 6:00am</span><span class="activity">Physics (Weak Subject)</span></div>
+        <div class="time-slot"><span class="subject">6:00am - 7:00am</span><span class="activity">Math (Weak Subject)</span></div>
+        <div class="time-slot"><span class="subject">7:40am - 4:00pm</span><span class="activity">School</span></div>
+        <div class="time-slot"><span class="subject">4:00pm - 7:00pm</span><span class="activity free-time">Free Time</span></div>
+        <div class="time-slot"><span class="subject">7:00pm - 8:00pm</span><span class="activity">Biology (Weak Subject)</span></div>
+      </div>
+
+      <!-- Thursday -->
+      <div class="day">
+        <div class="day-header">Thursday</div>
+        <div class="time-slot"><span class="subject">5:00am - 6:00am</span><span class="activity">Geography (Strong Subject)</span></div>
+        <div class="time-slot"><span class="subject">6:00am - 7:00am</span><span class="activity">Religious Studies (Strong Subject)</span></div>
+        <div class="time-slot"><span class="subject">8:00am - 4:00pm</span><span class="activity">School</span></div>
+        <div class="time-slot"><span class="subject">4:00pm - 7:00pm</span><span class="activity free-time">Free Time</span></div>
+        <div class="time-slot"><span class="subject">7:00pm - 8:00pm</span><span class="activity">Biology (Weak Subject)</span></div>
+      </div>
+
+      <!-- Friday -->
+      <div class="day">
+        <div class="day-header">Friday</div>
+        <div class="time-slot"><span class="subject">5:00am - 6:00am</span><span class="activity">Literature (Strong Subject)</span></div>
+        <div class="time-slot"><span class="subject">6:00am - 7:00am</span><span class="activity">Math (Weak Subject)</span></div>
+        <div class="time-slot"><span class="subject">7:40am - 4:00pm</span><span class="activity">School</span></div>
+        <div class="time-slot"><span class="subject">4:00pm - 7:00pm</span><span class="activity free-time">Free Time</span></div>
+        <div class="time-slot"><span class="subject">7:00pm - 8:00pm</span><span class="activity">Biology (Weak Subject)</span></div>
+      </div>
+
+      <!-- Saturday -->
+      <div class="day">
+        <div class="day-header">Saturday</div>
+        <div class="time-slot"><span class="subject">9:00am - 10:00am</span><span class="activity">Geography (Strong Subject)</span></div>
+        <div class="time-slot"><span class="subject">10:00am - 11:00am</span><span class="activity">Religious Studies (Strong Subject)</span></div>
+        <div class="time-slot"><span class="subject">11:00am - 1:00pm</span><span class="activity">Gym</span></div>
+        <div class="time-slot"><span class="subject">1:30pm - 2:30pm</span><span class="activity free-time">Rest</span></div>
+        <div class="time-slot"><span class="subject">2:30pm - 3:30pm</span><span class="activity">Physics (Weak Subject)</span></div>
+        <div class="time-slot"><span class="subject">3:30pm - 6:30pm</span><span class="activity">Babysit</span></div>
+        <div class="time-slot"><span class="subject">6:30pm - 12:00am</span><span class="activity">TV Time</span></div>
+      </div>
+
+      <!-- Sunday -->
+      <div class="day">
+        <div class="day-header">Sunday</div>
+        <div class="time-slot"><span class="subject">All Day</span><span class="activity free-time">Rest on the Sabbath</span></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
